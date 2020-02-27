@@ -33,7 +33,7 @@ Setup:
 - Memory limit of 256MB
 - 20s timeout
 
-Total USD per month = 0.00653
+Total USD per month = 0.20
 
 ### Installing
 
