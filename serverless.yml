@@ -1,0 +1,26 @@
+# Please change the service name to your preferences
+service: my-email-telegram
+provider:
+  # aws by default
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: ap-southeast-1
+  environment: # bash command `export <THE ENV VAR>`
+    EMAIL: ${env:EMAIL}
+    PASSWORD: ${env:PASSWORD}
+    SERVER: ${env:SERVER}
+    MAX_DEPTH: ${env:MAX_DEPTH}
+    API_KEY: ${env:API_KEY}
+    CHAT_ID: ${env:CHAT_ID}
+    LAST_ID: ${env:LAST_ID}
+    CHANNEL_NAME: ${env:CHANNEL_NAME}
+
+functions:
+  telegram_bot:
+    handler: handler.telegram_bot
+    events:
+      - http:
+          path: check # Path to call this function, can change to other path
+          method: post # Can change to GET as well
+          cors: true
