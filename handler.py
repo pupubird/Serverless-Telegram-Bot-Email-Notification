@@ -176,6 +176,12 @@ def set_config(last_id):
         "CHAT_ID": CHAT_ID,
         "LAST_ID": last_id
     }, indent=2)
+    try:
+        obj.delete()
+    except Exception:
+        pass
+
+    obj = s3.Object(os.environ['BUCKETNAME'], os.environ['CONFIG'])
     obj.put(Body=json_payload)
 
 
