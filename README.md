@@ -9,15 +9,21 @@
 
 This is a program that can notify you whenever there is a new email coming in (Long-polling), utilized serverless framework for saving costs.
 
+The use-cases of this script is when you have a similar situation as below:
+
+Not all members in the organisation have the access to the email, but you would like to get every member notified.
+
+There are similar softwares / solutions but there will be more features coming up to suit more to the problem stated.
+
 ## Getting Started <a name = "getting_started"></a>
 
 The step-by-step tutorial is still under development.
 
 ### Prerequisites
 
-This program will require you to have any account on any cloud service provider listed on [serverless website](https://serverless.com/framework/docs/providers/)
+This program will require you to have an account on any Serverless Infrastructure Providers listed on <a href="https://serverless.com/framework/docs/providers/" target="_blank">serverless website</a>
 
-If you do not have an account and you would like to host it on your local machine, you may check out [another repo](https://github.com/pupubird/Python_telegram_email_notification)
+If you do not have an account and you would like to host it on your local machine, you may check out <a href="https://github.com/pupubird/Python_telegram_email_notification" target="_blank">another repo</a>
 
 A budget breakdown on using aws lambda function in 28-Feb-2020:
 
