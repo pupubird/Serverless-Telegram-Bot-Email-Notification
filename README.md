@@ -29,6 +29,8 @@ A budget breakdown on using aws lambda function in 28-Feb-2020:
 
 Setup:
 
+![Infrastructure](infra.png)
+
 - Polling at a period of 5 minutes using CloudWatch
 - Memory limit of 256MB
 - 20s timeout
