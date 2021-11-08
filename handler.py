@@ -158,10 +158,10 @@ def is_black_listed(mail_from):
 def send_message(mail_contents):
     global API_KEY, CHAT_ID
     if not CHAT_ID:
-        CHAT_ID = CHANNEL_NAME
+        CHAT_ID = f"@{CHANNEL_NAME}"
     data = {"chat_id": CHAT_ID, "text": mail_contents, "parse_mode": "Markdown"}
     res = requests.post(
-        f"https://api.telegram.org/bot{API_KEY}/sendMessage?chat_id=@{CHANNEL_NAME}",
+        f"https://api.telegram.org/bot{API_KEY}/sendMessage?chat_id={CHAT_ID}",
         data=data,
         json=data,
     )
