@@ -1,5 +1,7 @@
 # Please change the service name to your preferences
 service: my-email-telegram
+plugins:
+  - serverless-dotenv-plugin
 provider:
   # aws by default
   name: aws
